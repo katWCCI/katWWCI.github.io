@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+    font-family: Raleway;
+    background-color: var(--color3);
+
+
+}
+:root{
+    --color1: #ecb8cd;
+    --color2: #b7387d;
+    --color3: #32103b;
+    --color4: #5fd8e1;
+    --color5: #0f363f;
+    --color6: #28848f;
+    --color7: #041920;
+}
+
+img{
+   padding: 2em;
+    max-width: 250px;
+    .menu2 li:after,
+    .menu2 li:before {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 0px solid transparent;
+      width: 0%;
+      height: 0%;
+      transition: all 0.5s ease;
+    }
+    
+}
+
+div.container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 4em 3em;
+	text-align: center;
+}
+
+div.container a
+{
+    color: var(--color1);
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--color4);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 10%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+
+p{
+    color:#ecb8cd
+    
+}
+a{
+    color: #ecb8cd;
+}
+
+h1{
+    background: transparent;
+    font-size: 5em;
+    text-align: right;
+    color: var(--color7);
+    
+}
+
+h2{
+    text-align: center;
+    color: var(--color6);
+}
+
+h3{
+    color: var(--color4);
+}
+    
+li{
+    color: var(--color2);
+}
+
+.bg-img {
+    opacity: .7;
+    background-image: url("/images/marble.jpg"); 
+    background-size: contain;
+    height: 15em;
+    width: 99vw;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+
+@media screen and (min-width: 900px){
+    article {
+        margin-right: 2%;
+        width: 32%;
+
+    }
+    article:nth-child(even){
+        margin-right: 2%;
+    }
+    article:nth-child(3n){
+    margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 750px){
+    header h1{
+        float: left;
+    }
+    header nav{
+        float: right;
+    }
+    nav ul li{
+        border:none;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    nav ul li:last-child {
+        margin-right:0;
+    }
+}
+
+@supports (display: flex){
+    article:nth-child(even){
+        margin-right: 1rem;
+    }
+    article main {
+        display: block;
+    }
+    main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main article {
+        float: none;
+    }
+
+}
+
+
+
